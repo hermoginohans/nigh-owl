@@ -1,0 +1,47 @@
+﻿.hero{position:relative;isolation:isolate;background:linear-gradient(115deg,#090d12,#102029)}
+.hero .hero-scene{position:absolute;inset:8% 3% 8% auto;width:49%;height:84%;z-index:2;pointer-events:auto}
+.hero .hero-content{position:relative;z-index:3;pointer-events:none}
+.hero .hero-content button,.hero .hero-content a{pointer-events:auto}
+.polygon-owl{width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.polygon-owl-button{width:100%;max-width:630px;background:none;border:0;padding:0;cursor:pointer;border-radius:40%;touch-action:manipulation;filter:drop-shadow(0 20px 35px #0006)}
+.polygon-owl-button:focus-visible{outline:1px solid #bfd9e9;outline-offset:6px}
+.polygon-owl-button svg{display:block;width:100%;max-height:70vh;overflow:visible}
+.polygon-owl-body{transform-origin:260px 437px;transition:transform .3s ease-out}
+.polygon-wing{transition:transform .45s ease}.polygon-wing.left{transform-origin:145px 220px}.polygon-wing.right{transform-origin:375px 220px}
+.polygon-owl-button:is(:hover,:focus-visible,.owl-hello) .left{transform:rotate(16deg)}
+.polygon-owl-button:is(:hover,:focus-visible,.owl-hello) .right{transform:rotate(-16deg)}
+.polygon-eyelid{transition:transform .12s ease}
+.polygon-owl .polygon-owl-hint{color:#9cafbc;font:9px/1.6 Arial,sans-serif;letter-spacing:1.8px;text-align:center;margin:0;min-height:20px}
+@media(max-width:760px){.hero .hero-scene{position:relative;inset:auto;width:100%;height:390px;margin:0 auto;z-index:3}.polygon-owl-button{max-width:370px}.polygon-owl-button svg{max-height:350px}.hero .hero-content{padding-top:30px}}
+@media(prefers-reduced-motion:reduce){.polygon-owl-body{transform:none!important}.polygon-owl *{transition:none!important}}
+.hero .hero-scene{opacity:1}
+@media(max-width:760px){.hero{height:auto;display:flex;flex-direction:column;padding-top:85px}.hero .hero-content{order:1;padding-top:40px}.hero .hero-scene{order:2;flex:none;margin-bottom:45px}.hero .hero-side,.hero .hero-caption{display:none}}
+
+/* A distant star field frames the polygon owl. */
+.hero::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ z-index: -2;
+ pointer-events: none;
+ background: url('/images/interstellar-stars.svg') center center / cover no-repeat;
+ opacity: .88;
+ mask-image: linear-gradient(to bottom, #000 0%, #000 72%, transparent 100%);
+}
+.hero::after {
+ content: '';
+ position: absolute;
+ inset: 0;
+ z-index: -1;
+ pointer-events: none;
+ background: linear-gradient(90deg, #090d1280 0%, #090d1255 33%, transparent 63%);
+}
+@media(max-width:760px) {
+ .hero::before {background-position: 66% bottom; background-size: auto 900px; opacity: .7;}
+ .hero::after {background: linear-gradient(to bottom, #090d1266, transparent 65%);}
+}
+@media(prefers-reduced-motion:reduce) {
+ .hero .hero-scene {display: block;}
+}
+
+

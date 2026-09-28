@@ -1,0 +1,45 @@
+﻿/* Moonlit Teal palette */
+:root {
+ --night: #071416;
+ --surface: #10272a;
+ --mint: #78dcca;
+ --ink: #edf6f2;
+ --muted-ink: #afc6c1;
+ --line: #31534f;
+ background: var(--night);
+ color: var(--ink);
+}
+::selection {background: var(--mint); color: var(--night);}
+.site-shell {background-color: var(--night);}
+.site-shell .hero {background: linear-gradient(115deg, var(--night) 15%, #0d2326 72%, #0a1c20);}
+.site-shell .hero::after {background: linear-gradient(90deg, #07141699 0%, #07141655 33%, transparent 63%);}
+.site-shell .hero-shade {background: linear-gradient(90deg, #071416dd, #07141655 35%, transparent 60%), linear-gradient(0deg, #071416, transparent 25%);}
+.hero-bottom {background: var(--night);}
+.site-shell::before, .site-shell .hero::before {background-image: url('/images/interstellar-stars.svg');}
+.hero h1>span, .eyebrow, .hero .eyebrow, .service-card>svg, .text-link, .footer>a {color: var(--mint);}
+.hero-description, .section-description, .service-card p, .process-step p, .modal-copy, .expanded-services p {color: var(--muted-ink);}
+.desktop-nav {color: var(--muted-ink);}
+.desktop-nav .active, .desktop-nav a:hover, .desktop-nav button:hover {color: var(--mint);}
+.desktop-nav .active:after {background: var(--mint); box-shadow: 0 0 10px #78dcca55;}
+.button-light {background: var(--mint); color: var(--night); border-color: var(--mint); box-shadow: 0 0 25px #78dcca26;}
+.button-light:hover {background: #abeee0; border-color: #abeee0; box-shadow: 0 0 30px #78dcca40;}
+.button-outline, .play-circle, .circle-arrow, .step-number {border-color: #568d81;}
+.button-outline {background: #10272a55; color: var(--ink);}
+.button-outline:hover {background: #78dcca14; border-color: var(--mint);}
+button:focus-visible, a:focus-visible {outline-color: var(--mint);}
+.service-card {background: linear-gradient(130deg, #173733dd, #0c2022f2 70%); border-color: var(--line);}
+.service-card:hover {background: linear-gradient(130deg, #214a42, #10272a); border-color: var(--mint);}
+.service-card:hover .circle-arrow {background: var(--mint); color: var(--night);}
+.project-card {background: var(--surface); border-color: var(--line);}
+.project-card:hover {border-color: var(--mint);}
+.step-number {color: var(--mint); background: #10272a80;}
+.contact-banner {border-color: #3e6960; background-image: linear-gradient(90deg, #10272aeb, #10272a80, #10272ac9), url('/images/interstellar-stars.svg');}
+.contact-banner p:not(.eyebrow):not(.signature) {color: var(--muted-ink);}
+.signature, .hero-stats strong {color: var(--ink);}
+.hero-stats span, .footer>p, .contact-action>span, .reel-button small {color: #9dbab3;}
+.modal, .mobile-nav {background: var(--surface); border-color: var(--line); color: var(--ink);}
+.contact-form input, .contact-form select, .contact-form textarea {background: var(--night); border-color: var(--line); color: var(--ink);}
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {outline-color: var(--mint);}
+.polygon-owl .polygon-owl-hint {color: #a6d7cd;}
+@media(max-width:760px) {.site-shell .hero::after {background: linear-gradient(to bottom, #07141666, transparent 65%);}}
+
