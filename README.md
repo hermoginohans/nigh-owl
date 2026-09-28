@@ -20,6 +20,29 @@ GitHub Actions builds and deploys changes pushed to `main` using `.github/workfl
 The repository's Pages publishing source must be set to **GitHub Actions**.
 To use a different repository name or a custom domain, update `base` in `vite.config.js`.
 
+## Call scheduling
+
+Set `VITE_GOOGLE_BOOKING_URL` to the public Google Calendar appointment-schedule
+booking page to enable a callback calendar inside the inquiry dialog and booking
+links in the header and contact section. Use the full
+`https://calendar.google.com/calendar/appointments/...` URL from Google's website
+embed option. A `calendar.app.google` short link supports external booking only.
+
+In Google Calendar, create an **Appointment schedule**, set your duration and
+available hours, and enable **Check calendars for availability**. Choose a phone
+call location and configure the booking form to collect a callback number and
+project details. Google handles availability and appointment confirmation.
+The website's local inquiry brief is separate and is not sent to Google.
+
+For local development, copy `.env.example` to `.env.local`, set the booking URL,
+and restart Vite. For deployment, add the matching GitHub Actions repository
+variable and rerun the workflow. Booking URLs are public client configuration;
+never put calendar credentials or tokens in these variables.
+
+`VITE_CALENDLY_URL` remains an optional external-booking fallback if no Google
+booking page is configured. Without either URL, booking controls stay hidden and
+the existing inquiry form remains available.
+
 ## Validation
 
 - `npm run build`: TypeScript checks and production build in `dist/`.
