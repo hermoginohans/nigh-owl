@@ -20,7 +20,7 @@ const projects = [
 ]
 function Brand() {
   return <a className="brand supplied-brand" href="#home" aria-label="NightOwls Media & Solutions home">
-    <img className="supplied-logo" src="/images/nightowls-logo.jpg" alt="NightOwls Media & Solutions" width={1280} height={1280} />
+    <img className="supplied-logo" src={`${import.meta.env.BASE_URL}images/nightowls-logo.jpg`} alt="NightOwls Media & Solutions" width={1280} height={1280} />
   </a>
 }
 function Modal({ children, onClose, title }: { children: ReactNode; onClose: () => void; title: string }) {

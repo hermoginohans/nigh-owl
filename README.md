@@ -11,6 +11,15 @@ npm run dev
 
 On Windows PowerShell, use `npm.cmd` if script execution is disabled.
 
+Open the `/nigh-owl/` URL printed by Vite.
+
+## Hosting
+
+The site is configured for https://hermoginohans.github.io/nigh-owl/.
+GitHub Actions builds and deploys changes pushed to `main` using `.github/workflows/deploy.yml`.
+The repository's Pages publishing source must be set to **GitHub Actions**.
+To use a different repository name or a custom domain, update `base` in `vite.config.js`.
+
 ## Validation
 
 - `npm run build`: TypeScript checks and production build in `dist/`.
