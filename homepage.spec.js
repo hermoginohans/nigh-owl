@@ -1,12 +1,12 @@
-﻿import { test, expect } from '@playwright/test'
+import { test, expect } from '@playwright/test'
 test('desktop navigation, service details, projects and inquiry', async ({ page }) => {
   const errors = []
   page.on('pageerror', error => errors.push(error.message))
-  await page.goto('http://127.0.0.1:5173', { waitUntil: 'domcontentloaded' })
+  await page.goto('http://127.0.0.1:5173/nigh-owl/', { waitUntil: 'domcontentloaded' })
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Digital Solutions')
   await page.getByRole('button', { name: 'Explore Services' }).click()
-  await expect(page.getByText('UI / UX design')).toBeVisible()
-  await page.getByRole('button', { name: /Web Development.*Modern/ }).click()
+  await expect(page.getByText('Virtual assistance')).toBeVisible()
+  await page.getByRole('button', { name: /Website.*Responsive/ }).click()
   await expect(page.getByRole('dialog')).toBeVisible()
   await page.keyboard.press('Escape')
   await expect(page.getByRole('dialog')).toHaveCount(0)
@@ -25,7 +25,7 @@ test('desktop navigation, service details, projects and inquiry', async ({ page 
 })
 test('mobile menu and horizontal layout', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
-  await page.goto('http://127.0.0.1:5173', { waitUntil: 'domcontentloaded' })
+  await page.goto('http://127.0.0.1:5173/nigh-owl/', { waitUntil: 'domcontentloaded' })
   await page.getByRole('button', { name: 'Open menu', exact: true }).click()
   await page.locator('#mobile-nav').getByRole('link', { name: 'Services' }).click()
   await expect(page.locator('#mobile-nav')).toHaveCount(0)
