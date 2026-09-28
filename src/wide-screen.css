@@ -1,0 +1,70 @@
+﻿/* Fill large displays while retaining the existing tablet and mobile layouts. */
+.site-shell {max-width: none;}
+
+@media(min-width:1600px) {
+  .site-shell {--wide-unit: clamp(1px, .0625vw, 2px);}
+  .container {width: min(88%, 3200px); max-width: 3200px;}
+  .header-inner {height: calc(124 * var(--wide-unit)); gap: calc(30 * var(--wide-unit));}
+  .brand.supplied-brand {width: calc(146 * var(--wide-unit)); height: calc(112 * var(--wide-unit));}
+  .brand.supplied-brand .supplied-logo {width: calc(146 * var(--wide-unit)); height: calc(146 * var(--wide-unit));}
+  .desktop-nav {font-size: calc(12 * var(--wide-unit)); gap: calc(32 * var(--wide-unit));}
+  .header-actions {gap: calc(24 * var(--wide-unit));}
+  .menu-button {width: calc(32 * var(--wide-unit)); height: calc(40 * var(--wide-unit));}
+  .menu-button svg {width: calc(22 * var(--wide-unit)); height: calc(22 * var(--wide-unit));}
+  .site-shell .hero {height: calc(850 * var(--wide-unit)); min-height: 850px;}
+  .hero .hero-content {padding-top: calc(195 * var(--wide-unit));}
+  .hero h1 {font-size: clamp(68px, 4.4vw, 156px); letter-spacing: -.045em;}
+  .hero h1>span {letter-spacing: -.045em;}
+  .hero-description {font-size: calc(14 * var(--wide-unit)); max-width: calc(450 * var(--wide-unit)); margin: calc(23 * var(--wide-unit)) 0 calc(26 * var(--wide-unit));}
+  .eyebrow {font-size: calc(9 * var(--wide-unit)); letter-spacing: .34em; margin-bottom: calc(15 * var(--wide-unit));}
+  .button {font-size: calc(12 * var(--wide-unit)); padding: calc(14 * var(--wide-unit)) calc(25 * var(--wide-unit)); gap: calc(23 * var(--wide-unit));}
+  .button svg {width: calc(18 * var(--wide-unit)); height: calc(18 * var(--wide-unit));}
+  .hero-buttons {gap: calc(22 * var(--wide-unit));}
+  .reel-button {font-size: calc(11 * var(--wide-unit)); gap: calc(11 * var(--wide-unit));}
+  .reel-button small {font-size: calc(9 * var(--wide-unit));}
+  .play-circle {width: calc(38 * var(--wide-unit)); height: calc(38 * var(--wide-unit));}
+  .hero-stats {margin-top: calc(43 * var(--wide-unit));}
+  .hero-stats>div {padding-inline: calc(20 * var(--wide-unit)); gap: calc(7 * var(--wide-unit));}
+  .hero-stats strong {font-size: calc(20 * var(--wide-unit));}
+  .hero-stats span {font-size: calc(9 * var(--wide-unit));}
+  .scroll-link {font-size: calc(8 * var(--wide-unit)); margin-top: calc(43 * var(--wide-unit)); gap: calc(13 * var(--wide-unit));}
+  .hero .hero-scene {right: 6%; width: 44%;}
+  .hero .polygon-owl-button {max-width: calc(600 * var(--wide-unit));}
+  .hero .polygon-owl-button svg {max-height: none;}
+  .hero .polygon-owl-hint {font-size: calc(9 * var(--wide-unit)); letter-spacing: .2em;}
+  .hero-side {top: calc(205 * var(--wide-unit)); right: 2%; font-size: calc(8 * var(--wide-unit));}
+  .hero-caption {bottom: calc(115 * var(--wide-unit)); right: 2%; font-size: calc(8 * var(--wide-unit));}
+  .hero-bottom {height: calc(90 * var(--wide-unit));}
+  .section {padding-top: calc(37 * var(--wide-unit));}
+  .section-heading {gap: calc(25 * var(--wide-unit)); margin-bottom: calc(25 * var(--wide-unit));}
+  .section h2 {font-size: calc(31 * var(--wide-unit)); letter-spacing: -.035em;}
+  .section-description {font-size: calc(11 * var(--wide-unit)); max-width: calc(340 * var(--wide-unit));}
+  .text-link {font-size: calc(11 * var(--wide-unit));}
+  .services-grid {gap: calc(15 * var(--wide-unit));}
+  .service-card {padding: calc(25 * var(--wide-unit)) calc(22 * var(--wide-unit)); min-height: calc(228 * var(--wide-unit));}
+  .service-card>svg {width: calc(32 * var(--wide-unit)); height: calc(32 * var(--wide-unit)); margin-bottom: calc(23 * var(--wide-unit));}
+  .service-card h3 {font-size: calc(14 * var(--wide-unit)); margin-bottom: calc(7 * var(--wide-unit));}
+  .service-card p {font-size: calc(12 * var(--wide-unit)); max-width: calc(185 * var(--wide-unit)); margin-bottom: calc(19 * var(--wide-unit));}
+  .service-number {font-size: calc(9 * var(--wide-unit));}
+  .circle-arrow {width: calc(25 * var(--wide-unit)); height: calc(25 * var(--wide-unit));}
+  .work-section {padding-top: calc(57 * var(--wide-unit));}
+  .project-card {height: calc(270 * var(--wide-unit));}
+  .project-overlay h3 {font-size: calc(18 * var(--wide-unit));}
+  .project-index {font-size: calc(8 * var(--wide-unit));}
+  .project-category {font-size: calc(10 * var(--wide-unit));}
+  .process-section {padding-top: calc(49 * var(--wide-unit));}
+  .process-step h3 {font-size: calc(15 * var(--wide-unit));}
+  .process-step p {font-size: calc(12 * var(--wide-unit)); max-width: calc(220 * var(--wide-unit));}
+  .step-number {width: calc(39 * var(--wide-unit)); height: calc(39 * var(--wide-unit)); font-size: calc(11 * var(--wide-unit));}
+  .contact-section {margin-top: calc(50 * var(--wide-unit));}
+  .contact-banner {padding: calc(35 * var(--wide-unit)); gap: calc(25 * var(--wide-unit));}
+  .contact-banner h2 {font-size: calc(25 * var(--wide-unit));}
+  .contact-banner .eyebrow {font-size: calc(8 * var(--wide-unit));}
+  .contact-banner p:not(.eyebrow):not(.signature) {font-size: calc(12 * var(--wide-unit));}
+  .contact-action>span {font-size: calc(9 * var(--wide-unit));}
+  .signature {font-size: calc(32 * var(--wide-unit));}
+  .footer {padding-block: calc(35 * var(--wide-unit));}
+  .footer>p {font-size: calc(10 * var(--wide-unit));}
+  .footer>a {font-size: calc(9 * var(--wide-unit));}
+  .site-shell::before {background-size: 1600px 1000px;}
+}
